@@ -59,13 +59,11 @@ struct WebView: UIViewRepresentable {
         // viewportScript 부분을 다음과 같이 수정하세요:
 
         let viewportScript = """
-        // 기존 뷰포트 메타 태그 제거
         var existingViewport = document.querySelector('meta[name="viewport"]');
         if (existingViewport) {
             existingViewport.remove();
         }
 
-        // 새로운 뷰포트 메타 태그 설정
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover';
@@ -601,11 +599,10 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // 배경색
                 Color.black
                     .ignoresSafeArea(.all)
                 
-                // 웹뷰 - 강제 스케일링으로 화면에 맞춤
+                // 웹뷰
                 WebView(
                     url: URL(string: "https://pokemon-auto-chess.com/")!,
                     onPageLoaded: {
@@ -650,6 +647,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         
+                        // 새로고침
                         Button(action: {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 isLoading = true
@@ -669,7 +667,7 @@ struct ContentView: View {
                     
 //                    HStack {
 //                        Spacer()
-//                        
+//                        // 설정
 //                        Button(action: {
 //                            withAnimation(.easeInOut(duration: 0.3)) {
 //                                //설정 필요시 기능 추가
@@ -685,10 +683,7 @@ struct ContentView: View {
 //                        .padding(.trailing)
 //                        
 //                    }
-                    
-                    
                     Spacer()
-                    
                 }
             }
         }
