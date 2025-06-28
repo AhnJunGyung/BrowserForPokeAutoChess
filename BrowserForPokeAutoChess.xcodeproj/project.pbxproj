@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E71CA76C2E0EC62000D7CF2E /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E71CA76B2E0EC62000D7CF2E /* GoogleSignIn */; };
+		E71CA76E2E0EC62000D7CF2E /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E71CA76D2E0EC62000D7CF2E /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E7F0F25C2DEC078B00842A4B /* BrowserForPokeAutoChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserForPokeAutoChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E71CA7722E0ECD0E00D7CF2E /* Exceptions for "BrowserForPokeAutoChess" folder in "BrowserForPokeAutoChess" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E7F0F25B2DEC078B00842A4B /* BrowserForPokeAutoChess */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E7F0F25E2DEC078B00842A4B /* BrowserForPokeAutoChess */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E71CA7722E0ECD0E00D7CF2E /* Exceptions for "BrowserForPokeAutoChess" folder in "BrowserForPokeAutoChess" target */,
+			);
 			path = BrowserForPokeAutoChess;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71CA76C2E0EC62000D7CF2E /* GoogleSignIn in Frameworks */,
+				E71CA76E2E0EC62000D7CF2E /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,8 @@
 			);
 			name = BrowserForPokeAutoChess;
 			packageProductDependencies = (
+				E71CA76B2E0EC62000D7CF2E /* GoogleSignIn */,
+				E71CA76D2E0EC62000D7CF2E /* GoogleSignInSwift */,
 			);
 			productName = BrowserForPokeAutoChess;
 			productReference = E7F0F25C2DEC078B00842A4B /* BrowserForPokeAutoChess.app */;
@@ -94,6 +116,9 @@
 			);
 			mainGroup = E7F0F2532DEC078B00842A4B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E71CA76A2E0EC62000D7CF2E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E7F0F25D2DEC078B00842A4B /* Products */;
 			projectDirPath = "";
@@ -127,6 +152,8 @@
 /* Begin XCBuildConfiguration section */
 		E7F0F2682DEC078C00842A4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = E7F0F25E2DEC078B00842A4B /* BrowserForPokeAutoChess */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -190,6 +217,8 @@
 		};
 		E7F0F2692DEC078C00842A4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = E7F0F25E2DEC078B00842A4B /* BrowserForPokeAutoChess */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -255,11 +284,12 @@
 				DEVELOPMENT_TEAM = C6XLHPGAUK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrowserForPokeAutoChess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,11 +314,12 @@
 				DEVELOPMENT_TEAM = C6XLHPGAUK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrowserForPokeAutoChess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +355,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E71CA76A2E0EC62000D7CF2E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E71CA76B2E0EC62000D7CF2E /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E71CA76A2E0EC62000D7CF2E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		E71CA76D2E0EC62000D7CF2E /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E71CA76A2E0EC62000D7CF2E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7F0F2542DEC078B00842A4B /* Project object */;
 }
