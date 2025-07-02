@@ -32,8 +32,14 @@ struct WebView: UIViewRepresentable {
         let configuration = WKWebViewConfiguration()
         
         // JavaScript 활성화
-        configuration.preferences.javaScriptEnabled = true
-        configuration.allowsInlineMediaPlayback = true
+        if #available(iOS 14.0, *) {
+            let webpagePreferences = WKWebpagePreferences()
+            webpagePreferences.allowsContentJavaScript = true
+            configuration.defaultWebpagePreferences = webpagePreferences
+        } else {
+            // ✅ iOS 13 이하에서는 기존 방식 사용
+            configuration.preferences.javaScriptEnabled = true
+        }
         configuration.mediaTypesRequiringUserActionForPlayback = []
         
         // PC 브라우저로 인식되도록 User Agent 설정
@@ -58,7 +64,7 @@ struct WebView: UIViewRepresentable {
         
         // JavaScript 파일 경로
         guard let jsPath = Bundle.main.path(forResource: "viewport", ofType: "js"),
-              let jsContent = try? String(contentsOfFile: jsPath) else {
+              let jsContent = try? String(contentsOfFile: jsPath, encoding: .utf8) else {
             print("JavaScript 파일을 찾을 수 없습니다.")
             return
         }
