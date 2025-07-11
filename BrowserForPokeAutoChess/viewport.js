@@ -262,10 +262,6 @@ Object.defineProperty(window, 'innerHeight', {
 
 // 포괄적 요소 조절 함수
 function adjustAllElements() {
-    console.log('Adjusting all elements for 16:9 ratio');
-    console.log('Device:', DEVICE_WIDTH + 'x' + DEVICE_HEIGHT);
-    console.log('Optimal:', OPTIMAL_WIDTH + 'x' + OPTIMAL_HEIGHT);
-    console.log('Scale factor:', SCALE_FACTOR);
     
     // 1. 메인 컨테이너 16:9 비율 적용
     adjustMainContainer();
@@ -513,9 +509,3 @@ document.addEventListener('touchstart', function(e) {
         target.style.padding = '8px';
     }
 });
-
-console.log('16:9 dynamic element adjustment system initialized');
-console.log('Device size:', DEVICE_WIDTH, 'x', DEVICE_HEIGHT);
-console.log('Optimal size:', OPTIMAL_WIDTH, 'x', OPTIMAL_HEIGHT);
-console.log('Scale factor:', SCALE_FACTOR);
-console.log('Offset:', OFFSET_X, 'x', OFFSET_Y); 'Uniform:', UNIFORM_SCALE);

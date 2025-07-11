@@ -17,7 +17,6 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        // 페이지 로드 완료 후 추가 스크립트 실행 (필요시)
         parent.onPageLoaded?()
     }
 }
@@ -48,7 +47,7 @@ struct WebView: UIViewRepresentable {
         
         webView.navigationDelegate = context.coordinator
         
-        // 스크롤 비활성화 - 스케일링 사용하므로
+        // 스크롤 비활성화
         webView.scrollView.isScrollEnabled = false
         webView.scrollView.bounces = false
         webView.scrollView.showsHorizontalScrollIndicator = false
@@ -168,24 +167,6 @@ struct ContentView: View {
                         
                     }
                     
-//                    HStack {
-//                        Spacer()
-//                        // 설정
-//                        Button(action: {
-//                            withAnimation(.easeInOut(duration: 0.3)) {
-//                                //설정 필요시 기능 추가
-//                            }
-//                        }) {
-//                            Image(systemName: "gear.circle.fill")
-//                                .font(.title2)
-//                                .foregroundColor(.white)
-//                                .background(Color.black.opacity(0.6))
-//                                .clipShape(Circle())
-//                                .padding(.trailing)
-//                        }
-//                        .padding(.trailing)
-//                        
-//                    }
                     Spacer()
                 }
             }
@@ -194,8 +175,4 @@ struct ContentView: View {
         .statusBarHidden()
         .ignoresSafeArea(.all)
     }
-}
-
-#Preview {
-    ContentView()
 }
