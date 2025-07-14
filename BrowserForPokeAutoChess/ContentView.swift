@@ -51,7 +51,7 @@ struct ContentView: View {
                             .scaleEffect(1.5)
                             .tint(.white)
                         
-                        Text("Pokemon Auto Chess 로딩 중...")
+                        Text("Loading...")
                             .foregroundColor(.white)
                             .font(.headline)
                     }
